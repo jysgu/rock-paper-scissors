@@ -47,4 +47,18 @@ function playRound() {
 	console.log(`Player score: ${humanScore} Computer Score: ${computerScore}`);
 }
 
-playRound();
+function playGame(){
+	for (let turn = 0; turn <5; turn++){
+		playRound();
+	}
+
+	if (humanScore > computerScore) {
+		console.log("You win!");
+	} else if (humanScore < computerScore) {
+		console.log("You lose!");
+	} else {
+		console.log("Draw!");
+	}
+}
+
+playGame();
